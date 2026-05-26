@@ -231,9 +231,10 @@ jobs:
           flutter pub get
           flutter build macos --release -v
 
-      - name: Package macOS app
+      - name: Package App
         run: |
-          zip -r danmakufactory_macos_arm.zip gui/danmakufactory_flutter/build/macos/Build/Products/Releasedanmakufactory_flutter.app/*
+          cd gui/danmakufactory_flutter/build/macos/Build/Products/Release
+          zip -r danmakufactory_macos_arm.zip danmakufactory_flutter.app
 
       - name: Upload macOS
         uses: actions/upload-artifact@v7
