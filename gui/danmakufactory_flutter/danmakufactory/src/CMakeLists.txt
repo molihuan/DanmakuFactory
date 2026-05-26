@@ -98,7 +98,7 @@ if (CMAKE_SYSTEM_NAME MATCHES "OHOS" OR OHOS)
             # 设置工作目录
             WORKING_DIRECTORY "${XMAKE_FILE_DIR}"
             # 执行 oh xmake 编译脚本
-            COMMAND ${XMAKE_OH_BUILD_CMD}
+            COMMAND sh -c ${XMAKE_OH_BUILD_CMD}
             COMMAND xmake -v -P .
             # 创建目录
             COMMAND ${CMAKE_COMMAND} -E make_directory "${OHOS_DEFAULT_LIBS_DIR}"
