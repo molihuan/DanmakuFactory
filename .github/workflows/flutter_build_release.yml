@@ -235,6 +235,7 @@ jobs:
         run: |
           cd gui/danmakufactory_flutter/build/macos/Build/Products/Release
           zip -r danmakufactory_macos_arm.zip danmakufactory_flutter.app
+          cp danmakufactory_macos_arm.zip $GITHUB_WORKSPACE/
 
       - name: Upload macOS
         uses: actions/upload-artifact@v7
