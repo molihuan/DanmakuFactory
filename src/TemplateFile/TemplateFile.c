@@ -239,8 +239,8 @@ int readTemplateFile(const char *const ipFile, const char *const templateFile, D
                         if ((verType != 0 && tempPtr != tempStr) || *linePtr == '\0')
                         { /* 存储字符串常量 */
                             *tempPtr = '\0';
-                            if ((format.strTable[strTableIndex] = (char *)malloc((strlen(tempStr) + 1) * sizeof(char))) ==
-                                NULL)
+                            if ((format.strTable[strTableIndex] =
+                                     (char *)malloc((strlen(tempStr) + 1) * sizeof(char))) == NULL)
                             {
                                 return 2;
                             }
